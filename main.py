@@ -62,8 +62,7 @@ def get_content(url):
         except:
             print("超时重传")
             i += 1
-
-
+         
 def file_merging(m3u8_url_data):
     file_name = m3u8_url_data[0].split('.')[0] + '.mp4'
     with open('./vedio/' + file_name, 'wb') as f:
@@ -79,7 +78,6 @@ def file_merging(m3u8_url_data):
     f.close()
     shutil.rmtree('./temp_dir')
     print("合并文件完成")
-
 
 if __name__ == '__main__':
     print('zmq7多线程m3u8下载软件')
