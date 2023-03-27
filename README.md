@@ -12,9 +12,9 @@
                
     2，点击视频，获取key 例如 https://zmq71.com/#/watch/bc77b8f4-1dcf-4406-9a63-0ab11f100d9b
     
-            该视频对应Key值为 bc77b8f4-1dcf-4406-9a63-0ab11f100d9b，可填写多条key批量下载
+            该视频对应Key值为 bc77b8f4-1dcf-4406-9a63-0ab11f100d9b
             
-            将Key值写入到当前文件下 key.txt内，没有请自行创建
+            将Key值写入到当前文件下 key.txt内，可填写多条key批量下载
             
     3, 运行 python main.py，默认开启线程数 thread_nums = 25，可自行修改
     
