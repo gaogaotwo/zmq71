@@ -16,9 +16,8 @@
             
             将Key值写入到当前文件下 key.txt内，没有请自行创建
             
-    3, 程序执行即可，默认开启线程数 thread_nums = 25，可自行修改
+    3, 运行 python main.py，默认开启线程数 thread_nums = 25，可自行修改
     
         下载完成视频目录 在当前目录 vedio下
         
-    4，运行 python main.py
 
