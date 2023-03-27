@@ -6,38 +6,24 @@ import json
 from pathlib import Path
 import shutil
 import time
-"""
-    ps : how to use ?
-        如何使用，首先你的zmq71账号还未过期！，否则视频下载不完整！
-    1，可抓包搜索 "get?lang=en&" 
-           Palyload 获取 zmq7_u --> u 账号唯一值，必要!
-               zmq7_fp--> fp 非必要，需填写
-    2，点击视频，获取key 例如 https://zmq71.com/#/watch/bc77b8f4-1dcf-4406-9a63-0ab11f100d9b
-            该视频对应Key值为 bc77b8f4-1dcf-4406-9a63-0ab11f100d9b
-            将Key值写入到当前文件下 upload.txt内，没有请自行创建
-            
-    3, 程序执行即可，默认开启线程数 thread_nums = 25，可自行修改
-        下载完成视频目录 在当前目录 vedio下
-gaogaotwo 2023/03/19
-"""
-
-# 创建文件夹
-temp_dir = Path('./temp_dir')
-vedio_dir = Path('./vedio')
 
 # 单线程模式 程序执行时间 1161.4795308113098s
 # 多线程模式 程序执行时间 350s左右
-# 开启线程数量
-thread_nums = 25
+
+# 需进行相关配置
 zmq7_u = '674448b1-41b1-4b58-a08a-327d0819da68'
 zmq7_fp = 'e23f2769a8bc1ff481f3b03a2f563382'
+
+# 开启线程数量，默认25，请根据实际配置填写
+thread_nums = 25
 headers = {
     'Referer': 'https://zmq71.com/',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
 }
 zmq7_web = ''
 m3u8_date = ''
-
+temp_dir = Path('./temp_dir')
+vedio_dir = Path('./vedio')
 def zmq71_init(zmq7_key):
     # 请求 api_url获取到 m3u8_url的值
     global zmq7_web
