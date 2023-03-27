@@ -83,7 +83,7 @@ if __name__ == '__main__':
     print('zmq7多线程m3u8下载软件')
     urls = []
     #  注意路径./upload.txt 下需存放视频Key值
-    with open('./zmqurl.txt', encoding = 'utf-8') as f:
+    with open('./key.txt', encoding = 'utf-8') as f:
         for url in f.read().split('\n'):
             urls.append(url)
 
